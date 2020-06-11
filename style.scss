@@ -1,0 +1,101 @@
+body{
+    padding:0px;
+    margin:0px;
+    background-image: url('./calm_nature.jpg');
+    // background-image: url('./test.jpg');
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-origin: border-box;
+    // background-clip: border-box;
+    height: 100vh;
+    width: 100%;
+  }
+  #container{
+    height:500px;
+    width:400px;
+    // background:#11111150;
+    position:absolute;
+    left:calc(50% - 200px);
+    top: calc(50vh - 250px);
+    #mainframe{
+      box-shadow: 0px 0px 8px #11111140;
+      border: 1px solid #11111180;
+      position: absolute;
+      height:100%;
+      width:100%;
+      top:0px;
+      left:0px;
+      right:0px;
+      bottom:0px;
+      backdrop-filter: blur(3px);
+      border-radius:5px;
+      #heading{
+        width:100%;
+        height: 60px;
+        position: absolute;
+        top:0px;
+        pre{
+          margin:0px;
+          padding:0px;
+          position: absolute;
+          width:100%;
+          height:20px;
+          top: calc(50% - 10px);
+          text-align: center;
+          font-family: 'Segoe UI';
+          font-weight: 2px;
+          font-size: 20px;
+        }
+      }
+      #list{
+        position: absolute;
+        width:100%;
+        height: calc(100% - 60px);
+        position: absolute;
+        top:60px;
+        // overflow-y: scroll;
+        .item{
+          height:40px;
+          width:calc(100% - 20px);
+          border-radius: 5px;
+          box-shadow: 0px 0px 5px #11111160;
+          margin:10px;
+          display: flex;
+          input{
+            position: absolute;
+            height: 30px;
+            width:calc(100% - 20px);
+            padding:2px;
+            display: none;
+            backdrop-filter: grayscale(100%);
+            &.show{
+              display:block;
+            }
+          }
+          span{
+            height: 30px;
+            width: 20px;
+            margin: 5px;
+            width: 100%;
+            border-radius: 5px;
+            &#text{
+              padding:2px;
+              font-family: 'Segoe UI';
+              color: #ccc;
+            }
+            &#star,&#remove{
+              margin-left:0px;
+              max-width: 30px;
+              text-align: center;
+              transition: box-shadow 200ms ease;
+              cursor: pointer;
+              &:hover{
+                box-shadow:0px 0px 5px #111;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
